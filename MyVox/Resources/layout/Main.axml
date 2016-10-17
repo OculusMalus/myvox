@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="1">
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:layout_weight=".45"
+        android:gravity="center_vertical">
+        <EditText
+            android:inputType="textMultiLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText"
+            android:hint="What would you like to say?" />
+        <Button
+            android:text="Hello, my name is "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/helloMyNameIs" />
+                        
+        <Button
+            android:text="Ralph "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ralph" />
+        <Button
+            android:text="I'm feeling tired. "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tired" />
+        <Button
+            android:text="See you later! "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/later" />
+        <Button
+            android:text="Speak"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/speak" />
+    </LinearLayout>
+</LinearLayout>
