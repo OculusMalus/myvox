@@ -33,8 +33,14 @@ namespace MyVox
             var ralph = FindViewById<Button>(Resource.Id.ralph);
             var speak = FindViewById<Button>(Resource.Id.speak);
             var tired = FindViewById<Button>(Resource.Id.tired);
-            var later = FindViewById<Button>(Resource.Id.later);
-
+            
+            var goodbye = FindViewById<Button>(Resource.Id.goodbye);
+            var Hello = FindViewById<Button>(Resource.Id.niceToMeetYou);
+            var thankyou = FindViewById<Button>(Resource.Id.thankYou);
+            var thirsty = FindViewById<Button>(Resource.Id.thirsty);
+            
+            var hungry = FindViewById<Button>(Resource.Id.hungry);
+            var potty = FindViewById<Button>(Resource.Id.potty);
 
             context = speak.Context;
             textToSpeech = new TextToSpeech(this, this, "com.google.android.tts");
@@ -49,7 +55,9 @@ namespace MyVox
             {
                 // if there is nothing to say, don't say it
                 if (!string.IsNullOrEmpty(editText.Text))
-                    textToSpeech.Speak(editText.Text, QueueMode.Flush, null, "KEY_FEATURE_NETWORK_SYNTHESIS");
+
+                    
+                textToSpeech.Speak(editText.Text, QueueMode.Flush, null, null);
                 editText.Text = "";
             };
 
@@ -58,6 +66,14 @@ namespace MyVox
                 if (!TextUtils.IsEmpty(helloMyNameIs.Text))
                 {
                     editText.Append(helloMyNameIs.Text);
+                }
+            };
+
+            goodbye.Click += delegate
+            {
+                if (!TextUtils.IsEmpty(goodbye.Text))
+                {
+                    editText.Append(goodbye.Text);
                 }
             };
 
@@ -77,15 +93,64 @@ namespace MyVox
                 }
             };
 
-            later.Click += delegate
+            goodbye.Click += delegate
             {
-                if (!TextUtils.IsEmpty(later.Text))
+                if (!TextUtils.IsEmpty(goodbye.Text))
                 {
-                    editText.Append(later.Text);
+                    editText.Append(goodbye.Text);
                 }
             };
 
+            Hello.Click += delegate
+            {
+                if (!TextUtils.IsEmpty(Hello.Text))
+                {
+                    editText.Append(Hello.Text);
+                }
+            };
+
+            thankyou.Click += delegate
+            {
+                if (!TextUtils.IsEmpty(thankyou.Text))
+                {
+                    editText.Append(thankyou.Text);
+                }
+            };
+
+            thirsty.Click += delegate
+            {
+                if (!TextUtils.IsEmpty(thirsty.Text))
+                {
+                    editText.Append(thirsty.Text);
+                }
+            };
+
+            tired.Click += delegate
+            {
+                if (!TextUtils.IsEmpty(tired.Text))
+                {
+                    editText.Append(tired.Text);
+                }
+            };
+
+            potty.Click += delegate
+            {
+                if (!TextUtils.IsEmpty(potty.Text))
+                {
+                    editText.Append(potty.Text);
+                }
+            };
+
+            hungry.Click += delegate
+            {
+                if (!TextUtils.IsEmpty(hungry.Text))
+                {
+                    editText.Append(hungry.Text);
+                }
+            };
         }
+
+
 
 
         void TextToSpeech.IOnInitListener.OnInit(OperationResult status)

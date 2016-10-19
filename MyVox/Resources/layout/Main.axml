@@ -1,49 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="5dp"
+              
     android:weightSum="1">
+<!--  1st Child Layout  (Nested In Parent Layout) with Horizontal Orientation -->
+  <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:gravity="center">
+    <Button
+          android:id="@+id/Phrases"
+          android:layout_weight="1"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:text="Phrases" />
+    <Button
+        android:id="@+id/Words"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="Words" />
+    <Button
+        android:id="@+id/History"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="History" />
+  </LinearLayout>
+<!--  2nd Child Layout  (Nested In Parent Layout) with Horizontal Orientation -->
     <LinearLayout
-        android:orientation="vertical"
-        android:minWidth="25px"
-        android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout1"
-        android:layout_weight=".45"
-        android:gravity="center_vertical">
+        android:orientation="horizontal">
         <EditText
-            android:inputType="textMultiLine"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/editText"
-            android:hint="What would you like to say?" />
-        <Button
-            android:text="Hello, my name is "
-            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/helloMyNameIs" />
-                        
-        <Button
-            android:text="Ralph "
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/ralph" />
-        <Button
-            android:text="I'm feeling tired. "
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tired" />
-        <Button
-            android:text="See you later! "
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/later" />
+            android:hint="What do you want to say?" />
         <Button
             android:text="Speak"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/speak" />
+            android:id="@+id/speak"
+            android:layout_weight="4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
     </LinearLayout>
+<!--  3rd Child Layout  (Nested In Parent Layout) with Horizontal Orientation -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+      
+        <Button
+            android:id="@+id/helloMyNameIs" 
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/hi"
+            android:text="Hello, my name is "/>
+
+        <Button
+            android:id="@+id/ralph"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ralph"
+            android:gravity="bottom"
+            android:text="Ralph "/>
+          
+        <Button
+            android:id="@+id/goodbye"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/goodbye" 
+            android:text="See you later. "/>
+      
+    </LinearLayout>
+  
+  <!--4th child layout-->
+  <LinearLayout
+      android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/niceToMeetYou"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/Hello"
+        android:text="It is nice to meet you.  "/>
+
+    <Button
+        android:id="@+id/thankYou"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/thankyou"
+        android:gravity="bottom"
+        android:text="Thank you! "/>
+
+    <Button
+        android:id="@+id/thirsty"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/thirsty"
+        android:text="I'm feeling thirsty. "/>
+
+  </LinearLayout>
+
+  <!--5th child layout-->
+  <LinearLayout
+      android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/hungry"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/hungry"
+        android:text="I'm feeling hungry. "/>
+
+    <Button
+        android:id="@+id/tired"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/sleepy"
+        android:gravity="bottom"
+        android:text="I'm feeling tired. "/>
+
+    <Button
+        android:id="@+id/potty"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/potty"
+        android:text="I need to use the toilet. "/>
+
+  </LinearLayout>
 </LinearLayout>
