@@ -17,19 +17,22 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="Phrases" />
+            android:text="Phrases"
+            android:textSize="11dip"/>
         <Button
             android:id="@+id/words"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="Words" />
+            android:text="Words"
+            android:textSize="11dip"/>
         <Button
             android:id="@+id/history"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="@string/History" />
+            android:text="@string/History"
+            android:textSize="11dip"/>
     </LinearLayout>
 <!--  2nd Child Layout  (Nested In Parent Layout) with Horizontal Orientation -->
     <LinearLayout
@@ -41,13 +44,15 @@
             android:layout_weight="1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:hint="What do you want to say?" />
+            android:hint="What do you want to say?"
+            android:textSize="11dip"/>
         <Button
             android:text="Speak"
             android:id="@+id/speak"
             android:layout_weight="4"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textSize="11dip"/>
     </LinearLayout>
 <!--  3rd Child Layout  (Nested In Parent Layout) with Horizontal Orientation -->
     <LinearLayout
@@ -61,7 +66,7 @@
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/hi"
             android:text="Hello, my name is "
-            android:textSize="12dip" />
+            android:textSize="9dip"/>
         <Button
             android:id="@+id/ralph"
             android:layout_weight="1"
@@ -69,14 +74,16 @@
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/ralph"
             android:gravity="bottom"
-            android:text="Ralph " />
+            android:text="Ralph "
+            android:textSize="9dip"/>
         <Button
             android:id="@+id/goodbye"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/goodbye"
-            android:text="See you later. " />
+            android:text="See you later. "
+            android:textSize="9dip"/>
     </LinearLayout>
 <!--4th child layout-->
     <LinearLayout
@@ -89,7 +96,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/Hello"
-            android:text="It is nice to meet you.  " />
+            android:text="It is nice to meet you. "
+            android:textSize="9dip"/>
         <Button
             android:id="@+id/thankYou"
             android:layout_weight="1"
@@ -97,14 +105,16 @@
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/thankyou"
             android:gravity="bottom"
-            android:text="Thank you! " />
+            android:text="Thank you! "
+            android:textSize="9dip"/>
         <Button
             android:id="@+id/thirsty"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/thirsty"
-            android:text="I'm feeling thirsty. " />
+            android:text="I'm feeling thirsty. "
+            android:textSize="9dip"/>
     </LinearLayout>
 <!--5th child layout-->
     <LinearLayout
@@ -117,7 +127,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/hungry"
-            android:text="I'm feeling hungry. " />
+            android:text="I'm feeling hungry. "
+            android:textSize="9dip" />
         <Button
             android:id="@+id/tired"
             android:layout_weight="1"
@@ -125,13 +136,15 @@
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/sleepy"
             android:gravity="bottom"
-            android:text="I'm feeling tired. " />
+            android:text="I'm feeling tired. "
+            android:textSize="9dip" />
         <Button
             android:id="@+id/potty"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/potty"
-            android:text="I need to use the toilet. " />
+            android:text="I need to use the toilet. "
+            android:textSize="9dip" />
     </LinearLayout>
 </LinearLayout>

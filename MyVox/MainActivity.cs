@@ -41,7 +41,6 @@ namespace MyVox
             var thirsty = FindViewById<Button>(Resource.Id.thirsty);
             var hungry = FindViewById<Button>(Resource.Id.hungry);
             var potty = FindViewById<Button>(Resource.Id.potty);
-
             
 
             context = speak.Context;
@@ -52,11 +51,6 @@ namespace MyVox
             textToSpeech.SetPitch(.70f);
             textToSpeech.SetSpeechRate(.90f);
 
-            //words.Click += delegate {
-            //    StartActivity(typeof(Activity2));
-            //};
-
-
             speak.Click += delegate
             {
                 // if there is nothing to say, don't say it
@@ -64,12 +58,10 @@ namespace MyVox
 
 
                     textToSpeech.Speak(editText.Text, QueueMode.Flush, null, null);
+                    //add phrase to list of spoken phrases
                     spokenHistoryList.Add(editText.Text);
+                    //empty editText string
                     editText.Text = "";
-
-                //add phrase to list of spoken phrases
-                
-
             };
 
             Button history = FindViewById<Button>(Resource.Id.history);
@@ -80,7 +72,13 @@ namespace MyVox
 
                 HistoryListViewAdapter adapter = new HistoryListViewAdapter(this, spokenHistoryList);
                 spokenHistoryListView.Adapter = adapter;
+                Button back = FindViewById<Button>(Resource.Id.back);
+                back.Click += delegate { SetContentView(Resource.Layout.Main); };
+
             };
+
+
+            
 
 
             helloMyNameIs.Click += delegate
@@ -158,8 +156,12 @@ namespace MyVox
             };
         }
 
-
-
+        private EventHandler back_Click(object sender, EventArgs e)
+        {
+            SetContentView(Resource.Layout.Main);
+            return null;
+                
+        }
 
         void TextToSpeech.IOnInitListener.OnInit(OperationResult status)
         {
