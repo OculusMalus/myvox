@@ -16,7 +16,8 @@ namespace MyVox
     [Activity(Label = "MyVox", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity, TextToSpeech.IOnInitListener
     {
-
+        private List<string> spokenHistoryList = new List<string>();
+        private ListView spokenHistoryListView;
         TextToSpeech textToSpeech;
         Context context;
         Java.Util.Locale lang;
@@ -28,19 +29,20 @@ namespace MyVox
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
+            var words = FindViewById<Button>(Resource.Id.words);
             var editText = FindViewById<EditText>(Resource.Id.editText);
             var helloMyNameIs = FindViewById<Button>(Resource.Id.helloMyNameIs);
             var ralph = FindViewById<Button>(Resource.Id.ralph);
             var speak = FindViewById<Button>(Resource.Id.speak);
             var tired = FindViewById<Button>(Resource.Id.tired);
-            
             var goodbye = FindViewById<Button>(Resource.Id.goodbye);
             var Hello = FindViewById<Button>(Resource.Id.niceToMeetYou);
             var thankyou = FindViewById<Button>(Resource.Id.thankYou);
             var thirsty = FindViewById<Button>(Resource.Id.thirsty);
-            
             var hungry = FindViewById<Button>(Resource.Id.hungry);
             var potty = FindViewById<Button>(Resource.Id.potty);
+
+            
 
             context = speak.Context;
             textToSpeech = new TextToSpeech(this, this, "com.google.android.tts");
@@ -50,16 +52,36 @@ namespace MyVox
             textToSpeech.SetPitch(.70f);
             textToSpeech.SetSpeechRate(.90f);
 
+            //words.Click += delegate {
+            //    StartActivity(typeof(Activity2));
+            //};
+
 
             speak.Click += delegate
             {
                 // if there is nothing to say, don't say it
                 if (!string.IsNullOrEmpty(editText.Text))
 
-                    
-                textToSpeech.Speak(editText.Text, QueueMode.Flush, null, null);
-                editText.Text = "";
+
+                    textToSpeech.Speak(editText.Text, QueueMode.Flush, null, null);
+                    spokenHistoryList.Add(editText.Text);
+                    editText.Text = "";
+
+                //add phrase to list of spoken phrases
+                
+
             };
+
+            Button history = FindViewById<Button>(Resource.Id.history);
+            history.Click += delegate
+            {
+                SetContentView(Resource.Layout.History);
+                spokenHistoryListView = FindViewById<ListView>(Resource.Id.myListView);
+
+                HistoryListViewAdapter adapter = new HistoryListViewAdapter(this, spokenHistoryList);
+                spokenHistoryListView.Adapter = adapter;
+            };
+
 
             helloMyNameIs.Click += delegate
             {
@@ -69,14 +91,7 @@ namespace MyVox
                 }
             };
 
-            goodbye.Click += delegate
-            {
-                if (!TextUtils.IsEmpty(goodbye.Text))
-                {
-                    editText.Append(goodbye.Text);
-                }
-            };
-
+            
             ralph.Click += delegate
             {
                 if (!TextUtils.IsEmpty(ralph.Text))
@@ -125,14 +140,7 @@ namespace MyVox
                 }
             };
 
-            tired.Click += delegate
-            {
-                if (!TextUtils.IsEmpty(tired.Text))
-                {
-                    editText.Append(tired.Text);
-                }
-            };
-
+            
             potty.Click += delegate
             {
                 if (!TextUtils.IsEmpty(potty.Text))
