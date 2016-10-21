@@ -16,17 +16,14 @@ namespace MyVox
     [Activity(Label = "MyVox", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity, TextToSpeech.IOnInitListener
     {
-        private List<string> spokenHistoryList = new List<string>();
-        private ListView spokenHistoryListView;
         TextToSpeech textToSpeech;
         Context context;
         Java.Util.Locale lang;
+        private List<string> spokenHistoryList = new List<string>();
 
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-
-            // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
             var words = FindViewById<Button>(Resource.Id.words);
@@ -41,7 +38,6 @@ namespace MyVox
             var thirsty = FindViewById<Button>(Resource.Id.thirsty);
             var hungry = FindViewById<Button>(Resource.Id.hungry);
             var potty = FindViewById<Button>(Resource.Id.potty);
-            
 
             context = speak.Context;
             textToSpeech = new TextToSpeech(this, this, "com.google.android.tts");
@@ -67,14 +63,10 @@ namespace MyVox
             Button history = FindViewById<Button>(Resource.Id.history);
             history.Click += delegate
             {
-                SetContentView(Resource.Layout.History);
-                spokenHistoryListView = FindViewById<ListView>(Resource.Id.myListView);
-
-                HistoryListViewAdapter adapter = new HistoryListViewAdapter(this, spokenHistoryList);
-                spokenHistoryListView.Adapter = adapter;
-                Button back = FindViewById<Button>(Resource.Id.back);
-                back.Click += delegate { SetContentView(Resource.Layout.Main); };
-
+                String[] phraseHistoryArray = new String[spokenHistoryList.Count()];
+                Intent intent = new Intent(this, typeof(HistoryActivity));
+                intent.PutExtra("history_list", phraseHistoryArray);
+                this.StartActivity(intent);
             };
 
 
