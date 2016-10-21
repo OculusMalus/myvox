@@ -63,7 +63,7 @@ namespace MyVox
             Button history = FindViewById<Button>(Resource.Id.history);
             history.Click += delegate
             {
-                String[] phraseHistoryArray = new String[spokenHistoryList.Count()];
+                String[] phraseHistoryArray = spokenHistoryList.ToArray();
                 Intent intent = new Intent(this, typeof(HistoryActivity));
                 intent.PutExtra("history_list", phraseHistoryArray);
                 this.StartActivity(intent);
