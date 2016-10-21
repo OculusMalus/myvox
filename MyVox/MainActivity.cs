@@ -26,7 +26,6 @@ namespace MyVox
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);
 
-            var words = FindViewById<Button>(Resource.Id.words);
             var editText = FindViewById<EditText>(Resource.Id.editText);
             var helloMyNameIs = FindViewById<Button>(Resource.Id.helloMyNameIs);
             var ralph = FindViewById<Button>(Resource.Id.ralph);
@@ -70,7 +69,15 @@ namespace MyVox
             };
 
 
-            
+            Button words = FindViewById<Button>(Resource.Id.words);
+            words.Click += delegate
+            {
+                String[] phraseHistoryArray = spokenHistoryList.ToArray();
+                Intent intent = new Intent(this, typeof(Words));
+                intent.PutExtra("history_list", phraseHistoryArray);
+                this.StartActivity(intent);
+
+            };
 
 
             helloMyNameIs.Click += delegate

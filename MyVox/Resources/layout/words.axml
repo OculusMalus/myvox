@@ -60,29 +60,29 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <Button
-            android:id="@+id/helloMyNameIs"
+            android:id="@+id/I"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/hi"
-            android:text="Hello, my name is "
+            android:drawableTop="@drawable/I"
+            android:text="I "
             android:textSize="9dip" />
         <Button
-            android:id="@+id/ralph"
+            android:id="@+id/you"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/ralph"
+            android:drawableTop="@drawable/you"
             android:gravity="bottom"
-            android:text="Ralph "
+            android:text="you "
             android:textSize="9dip" />
         <Button
-            android:id="@+id/goodbye"
+            android:id="@+id/they"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/goodbye"
-            android:text="See you later. "
+            android:drawableTop="@drawable/they"
+            android:text="they "
             android:textSize="9dip" />
     </LinearLayout>
 <!--4th child layout-->
@@ -91,29 +91,29 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <Button
-            android:id="@+id/niceToMeetYou"
+            android:id="@+id/feel"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/Hello"
-            android:text="It is nice to meet you. "
+            android:drawableTop="@drawable/feel"
+            android:text="feel "
             android:textSize="9dip" />
         <Button
-            android:id="@+id/thankYou"
+            android:id="@+id/happy"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/thankyou"
+            android:drawableTop="@drawable/happy"
             android:gravity="bottom"
-            android:text="Thank you! "
+            android:text="happy "
             android:textSize="9dip" />
         <Button
-            android:id="@+id/thirsty"
+            android:id="@+id/angry"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/thirsty"
-            android:text="I'm feeling thirsty. "
+            android:drawableTop="@drawable/angry"
+            android:text="angry "
             android:textSize="9dip" />
     </LinearLayout>
 <!--5th child layout-->
@@ -122,29 +122,29 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <Button
-            android:id="@+id/hungry"
+            android:id="@+id/come"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/hungry"
-            android:text="I'm feeling hungry. "
+            android:drawableTop="@drawable/come"
+            android:text="come "
             android:textSize="9dip" />
         <Button
-            android:id="@+id/tired"
+            android:id="@+id/give"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/sleepy"
+            android:drawableTop="@drawable/give"
             android:gravity="bottom"
-            android:text="I'm feeling tired. "
+            android:text="give "
             android:textSize="9dip" />
         <Button
-            android:id="@+id/potty"
+            android:id="@+id/go"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/potty"
-            android:text="I need to use the toilet. "
+            android:drawableTop="@drawable/go"
+            android:text="go "
             android:textSize="9dip" />
     </LinearLayout>
 </LinearLayout>

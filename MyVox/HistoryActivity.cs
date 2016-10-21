@@ -33,8 +33,8 @@ namespace MyVox
 
             HistoryListViewAdapter adapter = new HistoryListViewAdapter(this, spokenHistoryList);
             spokenHistoryListView.Adapter = adapter;
-            //Button back = FindViewById<Button>(Resource.Id.back);
-            //back.Click += delegate { SetContentView(Resource.Layout.Main); };
+            
+            
         }
     }
 }
