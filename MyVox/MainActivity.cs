@@ -37,6 +37,9 @@ namespace MyVox
             var thirsty = FindViewById<Button>(Resource.Id.thirsty);
             var hungry = FindViewById<Button>(Resource.Id.hungry);
             var potty = FindViewById<Button>(Resource.Id.potty);
+            var run = FindViewById<Button>(Resource.Id.runAway);
+            var love = FindViewById<Button>(Resource.Id.iLoveYou);
+            var play = FindViewById<Button>(Resource.Id.wantToPlay);
 
             context = speak.Context;
             textToSpeech = new TextToSpeech(this, this, "com.google.android.tts");
@@ -88,7 +91,29 @@ namespace MyVox
                 this.StartActivity(intent);
             };
 
+            love.Click += delegate
+            {
+                if (!TextUtils.IsEmpty(love.Text))
+                {
+                    editText.Append(love.Text);
+                }
+            };
 
+            play.Click += delegate
+            {
+                if (!TextUtils.IsEmpty(play.Text))
+                {
+                    editText.Append(play.Text);
+                }
+            };
+
+            run.Click += delegate
+            {
+                if (!TextUtils.IsEmpty(run.Text))
+                {
+                    editText.Append(run.Text);
+                }
+            };
 
             helloMyNameIs.Click += delegate
             {

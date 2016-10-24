@@ -12,7 +12,7 @@ using Android.Speech.Tts;
 
 namespace MyVox
 {
-    [Activity(Label = "HistoryActivity")]
+    [Activity(Label = "HistoryActivity", Theme = "@android:style/Theme.NoTitleBar")]
     public class HistoryActivity : Activity, TextToSpeech.IOnInitListener
     {
         String[] spokenHistoryListArray;

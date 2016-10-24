@@ -141,59 +141,71 @@ namespace MyVox
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060014
-			public const int I = 2131099668;
+			// aapt resource value: 0x7f060017
+			public const int I = 2131099671;
 			
-			// aapt resource value: 0x7f060019
-			public const int angry = 2131099673;
+			// aapt resource value: 0x7f06001c
+			public const int angry = 2131099676;
 			
 			// aapt resource value: 0x7f060001
 			public const int btnCamera = 2131099649;
 			
-			// aapt resource value: 0x7f06001a
-			public const int come = 2131099674;
+			// aapt resource value: 0x7f06001d
+			public const int come = 2131099677;
 			
-			// aapt resource value: 0x7f060007
-			public const int custom = 2131099655;
+			// aapt resource value: 0x7f060005
+			public const int custom = 2131099653;
 			
 			// aapt resource value: 0x7f060009
 			public const int editText = 2131099657;
 			
-			// aapt resource value: 0x7f060017
-			public const int feel = 2131099671;
+			// aapt resource value: 0x7f06001a
+			public const int feel = 2131099674;
 			
-			// aapt resource value: 0x7f06001b
-			public const int give = 2131099675;
+			// aapt resource value: 0x7f06001e
+			public const int give = 2131099678;
 			
-			// aapt resource value: 0x7f06001c
-			public const int go = 2131099676;
+			// aapt resource value: 0x7f06001f
+			public const int go = 2131099679;
 			
 			// aapt resource value: 0x7f06000d
 			public const int goodbye = 2131099661;
 			
-			// aapt resource value: 0x7f060018
-			public const int happy = 2131099672;
+			// aapt resource value: 0x7f06001b
+			public const int happy = 2131099675;
 			
 			// aapt resource value: 0x7f06000b
 			public const int helloMyNameIs = 2131099659;
 			
+			// aapt resource value: 0x7f060021
+			public const int help = 2131099681;
+			
 			// aapt resource value: 0x7f060008
 			public const int history = 2131099656;
+			
+			// aapt resource value: 0x7f060022
+			public const int home = 2131099682;
 			
 			// aapt resource value: 0x7f060011
 			public const int hungry = 2131099665;
 			
+			// aapt resource value: 0x7f060014
+			public const int iLoveYou = 2131099668;
+			
 			// aapt resource value: 0x7f060002
 			public const int image_camera = 2131099650;
 			
-			// aapt resource value: 0x7f060003
-			public const int myListView = 2131099651;
+			// aapt resource value: 0x7f060006
+			public const int myListView = 2131099654;
 			
 			// aapt resource value: 0x7f06000e
 			public const int niceToMeetYou = 2131099662;
 			
-			// aapt resource value: 0x7f060005
-			public const int phrases = 2131099653;
+			// aapt resource value: 0x7f060003
+			public const int phrases = 2131099651;
+			
+			// aapt resource value: 0x7f060020
+			public const int please = 2131099680;
 			
 			// aapt resource value: 0x7f060013
 			public const int potty = 2131099667;
@@ -201,11 +213,14 @@ namespace MyVox
 			// aapt resource value: 0x7f06000c
 			public const int ralph = 2131099660;
 			
+			// aapt resource value: 0x7f060016
+			public const int runAway = 2131099670;
+			
 			// aapt resource value: 0x7f06000a
 			public const int speak = 2131099658;
 			
-			// aapt resource value: 0x7f060004
-			public const int spokenHistoryList = 2131099652;
+			// aapt resource value: 0x7f060007
+			public const int spokenHistoryList = 2131099655;
 			
 			// aapt resource value: 0x7f060000
 			public const int textView1 = 2131099648;
@@ -213,8 +228,8 @@ namespace MyVox
 			// aapt resource value: 0x7f06000f
 			public const int thankYou = 2131099663;
 			
-			// aapt resource value: 0x7f060016
-			public const int they = 2131099670;
+			// aapt resource value: 0x7f060019
+			public const int they = 2131099673;
 			
 			// aapt resource value: 0x7f060010
 			public const int thirsty = 2131099664;
@@ -222,11 +237,14 @@ namespace MyVox
 			// aapt resource value: 0x7f060012
 			public const int tired = 2131099666;
 			
-			// aapt resource value: 0x7f060006
-			public const int words = 2131099654;
-			
 			// aapt resource value: 0x7f060015
-			public const int you = 2131099669;
+			public const int wantToPlay = 2131099669;
+			
+			// aapt resource value: 0x7f060004
+			public const int words = 2131099652;
+			
+			// aapt resource value: 0x7f060018
+			public const int you = 2131099672;
 			
 			static Id()
 			{

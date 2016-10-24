@@ -43,6 +43,9 @@ namespace MyVox
             var give = FindViewById<Button>(Resource.Id.give);
             var go = FindViewById<Button>(Resource.Id.go);
             var speak = FindViewById<Button>(Resource.Id.speak);
+            var please = FindViewById<Button>(Resource.Id.please);
+            var help = FindViewById<Button>(Resource.Id.help);
+            var home = FindViewById<Button>(Resource.Id.home);
 
 
             context = speak.Context;
@@ -98,6 +101,29 @@ namespace MyVox
                 this.StartActivity(intent);
             };
 
+            please.Click += delegate
+            {
+                if (!string.IsNullOrEmpty(please.Text))
+                {
+                    editText.Append(please.Text);
+                }
+            };
+
+            help.Click += delegate
+            {
+                if (!string.IsNullOrEmpty(help.Text))
+                {
+                    editText.Append(help.Text);
+                }
+            };
+
+            home.Click += delegate
+            {
+                if (!string.IsNullOrEmpty(home.Text))
+                {
+                    editText.Append(home.Text);
+                }
+            };
 
             I.Click += delegate
             {
