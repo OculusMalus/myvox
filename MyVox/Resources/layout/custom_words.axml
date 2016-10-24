@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <TextView
+        android:text="Lets take a picture!"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        style="@style/button_style1" />
+    <Button
+        android:id="@+id/btnCamera"
+        android:text="@string/openCamera"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/button_style1"
+        android:background="@drawable/button1" />
+    <ImageView
+        android:src="@android:drawable/ic_menu_gallery"
+        android:id="@+id/image_camera"
+        android:contentDescription="=@string/image_cd_camera"
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        android:adjustViewBounds="true" />
+</LinearLayout>

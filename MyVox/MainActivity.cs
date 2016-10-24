@@ -13,7 +13,7 @@ using Android.Text;
 namespace MyVox
 {
     
-    [Activity(Label = "MyVox", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "MyVox", MainLauncher = true, Theme = "@android:style/Theme.NoTitleBar" , Icon = "@drawable/icon")]
     public class MainActivity : Activity, TextToSpeech.IOnInitListener
     {
         TextToSpeech textToSpeech;
@@ -78,6 +78,16 @@ namespace MyVox
                 this.StartActivity(intent);
 
             };
+
+            Button custom = FindViewById<Button>(Resource.Id.custom);
+            custom.Click += delegate
+            {
+                String[] phraseHistoryArray = spokenHistoryList.ToArray();
+                Intent intent = new Intent(this, typeof(CameraActivity));
+                intent.PutExtra("history_list", phraseHistoryArray);
+                this.StartActivity(intent);
+            };
+
 
 
             helloMyNameIs.Click += delegate
@@ -161,6 +171,8 @@ namespace MyVox
             return null;
                 
         }
+
+        
 
         void TextToSpeech.IOnInitListener.OnInit(OperationResult status)
         {

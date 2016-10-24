@@ -13,7 +13,7 @@ using Android.Widget;
 namespace MyVox
 {
 
-    [Activity(Label = "Words")]
+    [Activity(Label = "Words", Theme = "@android:style/Theme.NoTitleBar")]
     public class Words : Activity, TextToSpeech.IOnInitListener
 
     {
@@ -87,6 +87,15 @@ namespace MyVox
                 intent.PutExtra("history_list", phraseHistoryArray);
                 this.StartActivity(intent);
 
+            };
+
+            Button custom = FindViewById<Button>(Resource.Id.custom);
+            custom.Click += delegate
+            {
+                String[] phraseHistoryArray = spokenHistoryList.ToArray();
+                Intent intent = new Intent(this, typeof(CameraActivity));
+                intent.PutExtra("history_list", phraseHistoryArray);
+                this.StartActivity(intent);
             };
 
 

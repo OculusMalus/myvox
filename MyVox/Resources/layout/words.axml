@@ -13,26 +13,41 @@
         android:orientation="horizontal"
         android:gravity="top">
         <Button
+            android:background="@drawable/button1"
             android:id="@+id/phrases"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="Phrases"
-            android:textSize="11dip" />
+            android:textSize="11dip"
+            style="@style/button_style1" />
         <Button
             android:id="@+id/words"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="Words"
-            android:textSize="11dip" />
+            android:textSize="11dip"
+            style="@style/button_style1"
+            android:background="@drawable/button1" />
+        <Button
+            android:id="@+id/custom"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="My Words"
+            android:textSize="11dip"
+            style="@style/button_style1"
+            android:background="@drawable/button1" />
         <Button
             android:id="@+id/history"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="@string/History"
-            android:textSize="11dip" />
+            android:textSize="11dip"
+            style="@style/button_style1"
+            android:background="@drawable/button1" />
     </LinearLayout>
 <!--  2nd Child Layout  (Nested In Parent Layout) with Horizontal Orientation -->
     <LinearLayout
@@ -52,7 +67,9 @@
             android:layout_weight="4"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textSize="11dip" />
+            android:textSize="11dip"
+            style="@style/button_style1"
+            android:background="@drawable/button1" />
     </LinearLayout>
 <!--  3rd Child Layout  (Nested In Parent Layout) with Horizontal Orientation -->
     <LinearLayout
@@ -66,7 +83,8 @@
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/I"
             android:text="I "
-            android:textSize="9dip" />
+            android:textSize="9dip"
+            android:background="@drawable/word_button" />
         <Button
             android:id="@+id/you"
             android:layout_weight="1"
@@ -75,7 +93,8 @@
             android:drawableTop="@drawable/you"
             android:gravity="bottom"
             android:text="you "
-            android:textSize="9dip" />
+            android:textSize="9dip" 
+            android:background="@drawable/word_button" />
         <Button
             android:id="@+id/they"
             android:layout_weight="1"
@@ -83,7 +102,8 @@
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/they"
             android:text="they "
-            android:textSize="9dip" />
+            android:textSize="9dip" 
+            android:background="@drawable/word_button" />
     </LinearLayout>
 <!--4th child layout-->
     <LinearLayout

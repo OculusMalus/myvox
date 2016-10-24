@@ -3,4 +3,5 @@
     <string name="Hello">Hello World, Click Me!</string>
     <string name="ApplicationName">MyVox</string>
   <string name="History">History</string>
+  <string name="openCamera">Open Camera</string>
 </resources>
