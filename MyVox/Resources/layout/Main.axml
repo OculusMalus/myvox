@@ -31,6 +31,15 @@
             android:background="@drawable/button1"
             style="@style/button_style1" />
         <Button
+            android:id="@+id/practice"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Practice"
+            android:textSize="11dip"
+            android:background="@drawable/button1"
+            style="@style/button_style1" />
+        <Button
             android:id="@+id/history"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -51,15 +60,16 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:hint="What do you want to say?"
-            android:textSize="11dip" />
+            android:textSize="14dip" />
         <Button
             android:text="Speak"
             android:id="@+id/speak"
-            android:layout_weight="4"
+            android:layout_weight="3"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:textSize="11dip"
-            android:background="@drawable/button1"
+            android:background="@drawable/speak_button"
             style="@style/button_style1" />
     </LinearLayout>
 <!--  3rd Child Layout  (Nested In Parent Layout) with Horizontal Orientation -->
@@ -86,7 +96,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/ralph"
-            android:gravity="bottom"
             android:text="Ralph "
             android:textSize="9dip"
             android:layout_margin="5dp"
@@ -132,7 +141,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/thankyou"
-            android:gravity="bottom"
             android:text="Thank you! "
             android:textSize="9dip"
             android:layout_margin="5dp"
@@ -178,7 +186,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/sleepy"
-            android:gravity="bottom"
             android:text="I'm feeling tired. "
             android:textSize="9dip"
             android:layout_margin="5dp"
@@ -200,49 +207,48 @@
             style="@style/button_style1"
             android:textStyle="bold" />
     </LinearLayout>
-  <LinearLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-    <Button
-        android:id="@+id/iLoveYou"
-        android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:drawableTop="@drawable/love"
-        android:text="I love you! "
-        android:textSize="9dip"
-        android:layout_margin="5dp"
-        android:background="@drawable/word_button"
-        android:textAlignment="center"
-        style="@style/button_style1"
-        android:textStyle="bold" />
-    <Button
-        android:id="@+id/wantToPlay"
-        android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:drawableTop="@drawable/play"
-        android:gravity="bottom"
-        android:text="Do you want to play? "
-        android:textSize="9dip"
-        android:layout_margin="5dp"
-        android:background="@drawable/word_button"
-        android:textAlignment="center"
-        style="@style/button_style1"
-        android:textStyle="bold" />
-    <Button
-        android:id="@+id/runAway"
-        android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:drawableTop="@drawable/run"
-        android:text="Run away with me! "
-        android:textSize="9dip"
-        android:layout_margin="5dp"
-        android:background="@drawable/word_button"
-        android:textAlignment="center"
-        style="@style/button_style1"
-        android:textStyle="bold" />
-  </LinearLayout>
+        <Button
+            android:id="@+id/iLoveYou"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/love"
+            android:text="I love you! "
+            android:textSize="9dip"
+            android:layout_margin="5dp"
+            android:background="@drawable/word_button"
+            android:textAlignment="center"
+            style="@style/button_style1"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/wantToPlay"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/play"
+            android:text="Do you want to play? "
+            android:textSize="9dip"
+            android:layout_margin="5dp"
+            android:background="@drawable/word_button"
+            android:textAlignment="center"
+            style="@style/button_style1"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/runAway"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/run"
+            android:text="Run away with me! "
+            android:textSize="9dip"
+            android:layout_margin="5dp"
+            android:background="@drawable/word_button"
+            android:textAlignment="center"
+            style="@style/button_style1"
+            android:textStyle="bold" />
+    </LinearLayout>
 </LinearLayout>

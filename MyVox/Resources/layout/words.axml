@@ -30,6 +30,15 @@
             android:textSize="11dip"
             style="@style/button_style1"
             android:background="@drawable/button1" />
+      <Button
+            android:id="@+id/practice"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Practice"
+            android:textSize="11dip"
+            android:background="@drawable/button1"
+            style="@style/button_style1" />
         <Button
             android:id="@+id/history"
             android:layout_weight="1"
@@ -51,7 +60,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:hint="What do you want to say?"
-            android:textSize="11dip" />
+            android:textSize="14dip" />
         <Button
             android:text="Speak"
             android:id="@+id/speak"
@@ -60,7 +69,7 @@
             android:layout_height="wrap_content"
             android:textSize="11dip"
             style="@style/button_style1"
-            android:background="@drawable/button1" />
+            android:background="@drawable/speak_button" />
     </LinearLayout>
 <!--  3rd Child Layout  (Nested In Parent Layout) with Horizontal Orientation -->
     <LinearLayout
@@ -133,7 +142,7 @@
             android:drawableTop="@drawable/happy"
             android:text="happy "
             android:textSize="9dip"
-            android:layout_margin="5dp" 
+            android:layout_margin="5dp"
             android:background="@drawable/word_button"
             android:textAlignment="center"
             style="@style/button_style1"
@@ -146,7 +155,7 @@
             android:drawableTop="@drawable/angry"
             android:text="angry "
             android:textSize="9dip"
-            android:layout_margin="5dp" 
+            android:layout_margin="5dp"
             android:background="@drawable/word_button"
             android:textAlignment="center"
             style="@style/button_style1"
@@ -165,7 +174,7 @@
             android:drawableTop="@drawable/come"
             android:text="come "
             android:textSize="9dip"
-            android:layout_margin="5dp" 
+            android:layout_margin="5dp"
             android:background="@drawable/word_button"
             android:textAlignment="center"
             style="@style/button_style1"
@@ -178,7 +187,7 @@
             android:drawableTop="@drawable/give"
             android:text="give "
             android:textSize="9dip"
-            android:layout_margin="5dp" 
+            android:layout_margin="5dp"
             android:background="@drawable/word_button"
             android:textAlignment="center"
             style="@style/button_style1"
@@ -191,55 +200,54 @@
             android:drawableTop="@drawable/go"
             android:text="go "
             android:textSize="9dip"
-            android:layout_margin="5dp" 
+            android:layout_margin="5dp"
             android:background="@drawable/word_button"
             android:textAlignment="center"
             style="@style/button_style1"
             android:textStyle="bold" />
     </LinearLayout>
-
-  <LinearLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-    <Button
-        android:id="@+id/please"
-        android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:drawableTop="@drawable/please"
-        android:text="please "
-        android:textSize="9dip"
-        android:layout_margin="5dp"
-        android:background="@drawable/word_button"
-        android:textAlignment="center"
-        style="@style/button_style1"
-        android:textStyle="bold" />
-    <Button
-        android:id="@+id/help"
-        android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:drawableTop="@drawable/help"
-        android:text="help "
-        android:textSize="9dip"
-        android:layout_margin="5dp"
-        android:background="@drawable/word_button"
-        android:textAlignment="center"
-        style="@style/button_style1"
-        android:textStyle="bold" />
-    <Button
-        android:id="@+id/home"
-        android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:drawableTop="@drawable/home"
-        android:text="home "
-        android:textSize="9dip"
-        android:layout_margin="5dp"
-        android:background="@drawable/word_button"
-        android:textAlignment="center"
-        style="@style/button_style1"
-        android:textStyle="bold" />
-  </LinearLayout>
+        <Button
+            android:id="@+id/please"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/please"
+            android:text="please "
+            android:textSize="9dip"
+            android:layout_margin="5dp"
+            android:background="@drawable/word_button"
+            android:textAlignment="center"
+            style="@style/button_style1"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/help"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/help"
+            android:text="help "
+            android:textSize="9dip"
+            android:layout_margin="5dp"
+            android:background="@drawable/word_button"
+            android:textAlignment="center"
+            style="@style/button_style1"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/home"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/home"
+            android:text="home "
+            android:textSize="9dip"
+            android:layout_margin="5dp"
+            android:background="@drawable/word_button"
+            android:textAlignment="center"
+            style="@style/button_style1"
+            android:textStyle="bold" />
+    </LinearLayout>
 </LinearLayout>

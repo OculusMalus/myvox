@@ -40,7 +40,7 @@ namespace MyVox
 
             lang = Java.Util.Locale.Default;
             textToSpeech.SetLanguage(lang);
-            textToSpeech.SetPitch(.70f);
+            textToSpeech.SetPitch(.20f);
             textToSpeech.SetSpeechRate(.90f);
 
 
