@@ -46,8 +46,8 @@ namespace MyVox
 
             lang = Java.Util.Locale.Default;
             textToSpeech.SetLanguage(lang);
-            textToSpeech.SetPitch(.20f);
-            textToSpeech.SetSpeechRate(.90f);
+            textToSpeech.SetPitch(.80f);
+            textToSpeech.SetSpeechRate(1f);
 
             speak.Click += delegate
             {
