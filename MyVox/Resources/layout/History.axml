@@ -9,7 +9,9 @@
         android:id="@+id/myListView"
         android:layout_weight="1"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content" 
+        android:layout_margin="5dp"
+         />
     <TextView
         android:id="@+id/spokenHistoryList"
         android:layout_weight="1"
@@ -17,5 +19,8 @@
         android:layout_height="wrap_content"
         android:textSize="12dip"
         android:layout_margin="5dp"
-        android:background="@drawable/word_button"/>
+        android:background="@drawable/speak_button"
+        android:textStyle="bold"
+        style="@style/button_style1"
+         />
 </LinearLayout>
